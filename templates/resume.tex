@@ -1,0 +1,96 @@
+\documentclass{resume}
+
+\name{ {{basics.name}} }
+\subtitle{ {{basics.jobTitle}} }
+\setemail{ {{basics.email}} }
+\setlinkedin{ {{basics.linkedin}} }
+\setgithub{ {{basics.github}} }
+\setphone{ {{basics.phone}} }
+
+
+
+\begin{document}
+
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+
+\headertype{\phone}{\email}{\linkedin}{\github}
+
+
+% Start section
+\section{\faTasks}{\textsc{Skills}}
+\vspace{-8pt}
+
+\begin{cvblock}
+    {% for skill in skills -%}
+    \skillsentry{ {{skill.name}}:} { {{ skill.keywords | join(sep=" , ")}} }
+    {% endfor %}
+\end{cvblock}
+
+%-------------------------------------------------- EXPERIENCE --------------------------------------------------
+\section{\faBriefcase}{Experience}
+
+{% for exp in work -%}
+\begin{cvblock}
+    \entryhead{ {{exp.position}} }{ {{exp.startDate}} --- {{exp.endDate}} }{ {{exp.name}} }
+    \begin{cventrylist}
+      {% for item in exp.description %}
+        \entryitem{ {{item}} }
+      {% endfor %}
+    \end{cventrylist}
+    \tagline{ {{ exp.keywords | join(sep=" , ")}} }
+\end{cvblock}
+{% endfor %}
+
+
+\vspace{-10pt}
+%-------------------------------------------------- EDUCATION --------------------------------------------------
+\section{\faGraduationCap}{\textsc{Education}}
+{% for ed in education%}
+\begin{cvblock}
+    \entryhead{ {{ed.studyType}} in {{ed.courseOfStudy}} }{ {{ed.startDate}} --- {{ed.endDate}} }{ {{ed.institution}}, {{ed.country}} }
+\end{cvblock}
+{% endfor %}
+
+
+%-------------------------------------------------- TRAINING --------------------------------------------------
+\section{\faCertificate}{\textsc{Training \& Certification}}
+
+\begin{cvblock}
+    {% for item in certificates %}
+    \entryhead{ {{item.issuer}} }{ {{item.date}} }{\bulletstyle\ {{item.name}} }
+    {% endfor %}
+\end{cvblock}
+
+
+%-------------------------------------------------- PROJECTS --------------------------------------------------
+\section{\faCode}{\textsc{Open Source Projects}}
+
+
+{% for proj in projects %}
+\begin{cvblock}
+    \entrysimple{\href{ {{proj.url}} }{ {{proj.name}} }
+    \begin{cventrylist}
+        \entryitem{ {{proj.description}} }
+    \end{cventrylist}
+    \tagline{ {{ proj.keywords | join(sep=" , ")}} }
+\end{cvblock}
+
+\vspace{-5pt}
+{% endfor %}
+
+
+
+%-------------------------------------------------- AWARDS --------------------------------------------------
+\section{\faAward}{\textsc{Awards \& Representative Experience}}
+
+\vspace{5pt}
+{% for award in awards %}
+\begin{cvblock}
+    \itemdetailed{ {{award.awarder}} - {{award.title}} }{ {{award.date}} }
+\end{cvblock}
+{% endfor %}
+
+\end{document}

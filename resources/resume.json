@@ -1,0 +1,114 @@
+{
+    "basics": {
+        "name": "John Doe",
+        "jobTitle": "Programmer",
+        "image": "",
+        "email": "john@gmail.com",
+        "phone": "(912) 555-4321",
+        "url": "https://johndoe.com",
+        "linkedin": "john-doe",
+        "github": "John",
+        "summary": "A summary of John Doe…"
+    },
+    "work": [
+        {
+            "name": "Company",
+            "position": "Fullstack Software Engineer",
+            "url": "https://company.com",
+            "startDate": "2013-01-01",
+            "endDate": "2014-01-01",
+            "description": [
+                "Description line 1",
+                "Description line 2",
+                "Description line 3",
+                "Description line 4"
+            ],
+            "keywords": [
+                "scala", "python3"
+            ]
+        },
+        {
+            "name": "Company 2",
+            "position": "Software Engineer",
+            "url": "https://2company.com",
+            "startDate": "2013-01-01",
+            "endDate": "2014-01-01",
+            "description": [
+                "2Description line 1",
+                "2Description line 2",
+                "2Description line 3",
+                "2Description line 4"
+            ],
+            "keywords": [
+                "reactjs", "python3"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "University",
+            "country": "Country",
+            "courseOfStudy": "Software Development",
+            "studyType": "Bachelor",
+            "startDate": "2011-01-01",
+            "endDate": "2013-01-01"
+        },
+        {
+            "institution": "University",
+            "country": "Country",
+            "courseOfStudy": "Software Development",
+            "studyType": "Bachelor",
+            "startDate": "2011-01-01",
+            "endDate": "2013-01-01"
+        }
+    ],
+    "awards": [{
+        "title": "Award",
+        "date": "2014-11-01",
+        "awarder": "Company",
+        "summary": "There is no spoon."
+    }],
+    "certificates": [{
+        "name": "Certificate",
+        "date": "2021-11-07",
+        "issuer": "Company",
+        "url": "https://certificate.com"
+    }],
+    "publications": [{
+        "name": "Publication",
+        "publisher": "Company",
+        "releaseDate": "2014-10-01",
+        "url": "https://publication.com",
+        "summary": "Description…"
+    }],
+    "skills": [
+        {
+            "name": "Programming Language",
+            "keywords": [
+                "Scala",
+                "Python3",
+                "Rust"
+            ]
+        },
+        {
+            "name": "Web Development",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        }
+    ],
+    "languages": [{
+        "language": "English",
+        "fluency": "Native speaker"
+    }],
+    "projects": [{
+        "name": "Project",
+        "description": "Description…",
+        "keywords": [
+            "scala", "python3", "docker"
+        ],
+        "url": "https://project.com/"
+    }]
+}
